@@ -16,9 +16,9 @@ RUN tar cf /tmp/rc59dmi/rpmbuild/SOURCES/rc59dmi-signing.tar.gz -C /tmp rc59dmi/
 ADD rpmspec/*.spec /tmp/rc59dmi
 
 RUN rpmbuild -ba \
-  --define '_topdir /tmp/ublue-os/rpmbuild' \
+  --define '_topdir /tmp/rc59dmi/rpmbuild' \
   --define '%_tmppath %{_topdir}/tmp' \
-  /tmp/ublue-os/*.spec
+  /tmp/rc59dmi/*.spec
 
 RUN mkdir /tmp/rc59dmi/{files,rpms}
 
