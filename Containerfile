@@ -9,6 +9,7 @@ ADD files/usr/lib/systemd /tmp/rc59dmi/update-services/usr/lib/systemd
 ADD files/usr/etc/containers /tmp/rc59dmi/signing/usr/etc/containers
 ADD files/usr/etc/pki /tmp/rc59dmi/signing/usr/etc/pki
 
+RUN mkdir -p /tmp/rc59dmi/rpmbuild/SOURCES
 RUN tar cf /tmp/rc59dmi/rpmbuild/SOURCES/rc59dmi-update-services.tar.gz -C /tmp rc59dmi/update-services
 RUN tar cf /tmp/rc59dmi/rpmbuild/SOURCES/rc59dmi-signing.tar.gz -C /tmp rc59dmi/signing
 
