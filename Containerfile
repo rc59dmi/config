@@ -1,6 +1,4 @@
-FROM registry.fedoraproject.org/fedora:latest AS builder
-
-RUN dnf install --disablerepo='*' --enablerepo='fedora,updates' --setopt install_weak_deps=0 --nodocs --assumeyes rpm-build systemd-rpm-macros
+FROM ghcr.io/rc59dmi/workflow-images/rpmbuild:latest AS builder
 
 ADD files/etc/rpm-ostreed.conf /tmp/rc59dmi/update-services/etc/rpm-ostreed.conf
 ADD files/usr/etc/systemd /tmp/rc59dmi/update-services/usr/etc/systemd
