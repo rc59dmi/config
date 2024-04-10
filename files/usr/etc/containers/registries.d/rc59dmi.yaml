@@ -1,0 +1,3 @@
+docker:
+  ghcr.io/rc59dmi:
+    use-sigstore-attachments: true
